@@ -14,6 +14,5 @@ def solution(n):
             lis[j] = True
     return count
 
-solution(5)
 
 
