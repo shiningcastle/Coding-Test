@@ -44,7 +44,3 @@ for i in range(n):
     print(exlist[i], end = ' ')
     if (i % 19 == 0) and (i != 0):
         print()
-
-             
-        
-
