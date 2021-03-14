@@ -1,4 +1,4 @@
-# Algorithm 💡
+# 코딩 테스트 💡
 
 **Commit convention rule** : 상태 - 내용  
 `Create/Update/Delete contents`
@@ -6,11 +6,7 @@
 <br>
 
 ## 사이트
-[`백준`](https://www.acmicpc.net/)
-<br>
-[`프로그래머스`](https://programmers.co.kr/)
-<br>
-[`코드업`](https://codeup.kr/index.php)  
+[`백준`](https://www.acmicpc.net/) &nbsp; [`프로그래머스`](https://programmers.co.kr/) &nbsp; [`코드업`](https://codeup.kr/index.php)  
 
 <br>
 
