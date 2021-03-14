@@ -11,3 +11,4 @@
 
 ## 규칙
 코딩 테스트를 위해 매일 한 문제씩 정리합니다.
+풀었던 모든 문제와 자세한 정리는 [`Velog`](https://velog.io/@shiningcastle)
