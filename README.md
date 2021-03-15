@@ -1,6 +1,7 @@
 # 코딩 테스트 💡
 
 **Commit convention rule** : 상태 - 내용  
+<br>
 `Create/Update/Delete contents`
 
 <br>
