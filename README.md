@@ -7,7 +7,8 @@
 <br>
 
 ## Site
-1. [`백준`](https://www.acmicpc.net/) &nbsp; 2. [`프로그래머스`](https://programmers.co.kr/) &nbsp; 3. [`코드업`](https://codeup.kr/index.php)  
+1. [`백준`](https://www.acmicpc.net/) <br>
+2. [`프로그래머스`](https://programmers.co.kr/)  
 
 <br>
 
