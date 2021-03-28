@@ -14,7 +14,6 @@ def solution(dirs):
     count = 0
 
     for char in dirs:
-
         if char == "U":
             # 현재 지점에서 위로 이동했을 때 좌표 값
             after = [x+y for x,y in zip(point, u)]
