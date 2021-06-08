@@ -17,8 +17,7 @@ def solution(dartResult):
         score = int(dartResult[idx : idx + 1 + twoCheck])
         bonus = dartResult[idx + 1 + twoCheck]
         # 옵션 존재하는 경우
-        if (idx + 2 + twoCheck) != len(dartResult) and 
-        (dartResult[idx + 2 + twoCheck] == "*" or dartResult[idx + 2 + twoCheck] == "#"):
+        if (idx + 2 + twoCheck) != len(dartResult) and (dartResult[idx + 2 + twoCheck] == "*" or dartResult[idx + 2 + twoCheck] == "#"):
             option = dartResult[idx + 2 + twoCheck]
             # 인덱스 옮겨줌
             idx += 3 + twoCheck
