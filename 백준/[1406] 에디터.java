@@ -33,7 +33,6 @@ public class Main {
                     break;
                 default :
                     leftStack.push(String.valueOf(command.charAt(2)));
-                    break;
             }
         }
         // 출력값은 left 스택의 맨 아래 원소부터이다. 그리고 right 스택의 원소와 합쳐야 하므로
