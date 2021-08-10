@@ -7,11 +7,11 @@
 <br>
 
 ## Site
-✔︎  [`백준`](https://www.acmicpc.net/) <br>
+✔︎ [`백준`](https://www.acmicpc.net/) <br>
 ✔︎ [`프로그래머스`](https://programmers.co.kr/) <br>
 ✔︎ [`Codility`](https://app.codility.com/programmers/) <br>
 ✔︎ [`HackerRank`](https://www.hackerrank.com/dashboard/) <br>
-✔︎  [`LeetCode`](https://leetcode.com/)
+✔︎ [`LeetCode`](https://leetcode.com/)
 
 <br>
 
