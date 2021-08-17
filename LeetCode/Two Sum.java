@@ -12,6 +12,7 @@ class Solution {
             if (map.containsKey(pair)) {
                 answer[0] = i;
                 answer[1] = map.get(pair);
+                break;
             }
             // 아직 해당 수의 짝의 값이 map에 없으면 해당 수 넣고 조회 재개
             else
