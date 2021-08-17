@@ -17,6 +17,7 @@ class Solution {
                     cache.remove(j);
                     cache.add(city);
                     cacheHit = true;
+                    break;
                 }
             }
             // 캐쉬 미스, 캐쉬 사이즈가 다찼으면 뺴고 최근 도시 넣기, 단 캐쉬 히트면 위에서 넣었으니 제외
