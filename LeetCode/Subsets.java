@@ -16,9 +16,4 @@ class Solution {
         dfs(answer, new ArrayList<>(), nums, 0);
         return answer;
     }
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.subsets(new int[]{1, 2, 3, 4}));
-    }
 }
