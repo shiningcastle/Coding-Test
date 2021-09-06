@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 class Main {
     private StringBuilder sb = new StringBuilder();
 
-    private void sequence(int n, int m, BufferedWriter bw, int idx, int before) throws IOException {
+    private void sequence(int n, int m, BufferedWriter bw, int idx, int before, boolean[] used) throws IOException {
         if (idx == m) {
             bw.write(sb.toString());
             bw.write('\n');
@@ -12,9 +12,13 @@ class Main {
         }
 
         for (int i = before; i <= n; i++) {
-            sb.append(i).append(' ');
-            sequence(n, m, bw, idx + 1, i);
-            sb.delete(sb.length() - 2, sb.length());
+            if (!used[i]) {
+                sb.append(i).append(' ');
+                used[i] = true;
+                sequence(n, m, bw, idx + 1, i, used);
+                sb.delete(sb.length() - 2, sb.length());
+                used[i] = false;
+            }
         }
     }
 
@@ -25,7 +29,7 @@ class Main {
         br.close();
         Main main = new Main();
         int n = Integer.parseInt(st.nextToken()), m = Integer.parseInt(st.nextToken());
-        main.sequence(n, m, bw, 0, 1);
+        main.sequence(n, m, bw, 0, 1, new boolean[n+1]);
         bw.flush();
         bw.close();
     }
