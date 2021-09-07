@@ -5,6 +5,24 @@ import java.util.Arrays;
 
 class Main {
     private static int max = -1000000000, min = 1000000000;
+    // 사칙 연산 처리
+    private int calculator(int tmp, int i, int idx, int[] nums) {
+        switch (i) {
+            case 0:
+                tmp += nums[idx];
+                break;
+            case 1:
+                tmp -= nums[idx];
+                break;
+            case 2:
+                tmp *= nums[idx];
+                break;
+            case 3:
+                tmp /= nums[idx];
+        }
+        return tmp;
+    }
+    
     private void findMaxMin(int n, int[] nums, int[] operators, int idx, int sum) {
         // 식이 완성된 경우 해당 식의 결과값으로 최대값, 최소값 갱신 후 종료
         if (idx == n) {
@@ -18,34 +36,12 @@ class Main {
                 continue;
             // 연산한 것을 다시 되돌리기 어려우므로 값을 복사해서 연산 후 전달하여 복구 안해도 된다
             int tmp = sum;
-            switch (i) {
-                case 0:
-                    tmp += nums[idx];
-                    break;
-                case 1:
-                    tmp -= nums[idx];
-                    break;
-                case 2:
-                    tmp *= nums[idx];
-                    break;
-                case 3:
-                    // 0으로 나누는 경우는 불가능이라 해당 연산 케이스 종료
-                    if (nums[idx] == 0)
-                        return;
-                    // 음수를 양수로 나눌 때
-                    else if (tmp < 0 && nums[idx] > 0)
-                        tmp = -((-tmp) / nums[idx]);
-                    // 나머지 경우
-                    else
-                        tmp /= nums[idx];
-            }
             // 해당 연산자 사용 표시 후에 다음 연산자와 숫자 넣도록 재귀호출, 다시 해당 연산자 미사용 처리
             operators[i]--;
-            findMaxMin(n, nums, operators, idx+1, tmp);
+            findMaxMin(n, nums, operators, idx + 1, calculator(tmp, i, idx, nums));
             operators[i]++;
         }
     }
-
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
