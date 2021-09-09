@@ -9,24 +9,17 @@ class Main {
         // 조건대로 정렬
         Arrays.sort(names, (o1, o2) -> {
             int[] score1 = map.get(o1), score2 = map.get(o2);
-            // 국어 점수 낮은 경우
-            if (score1[0] < score2[0])
-                return 1;
-                // 국어 점수 높은 경우
-            else if (score1[0] > score2[0])
-                return -1;
-                // 국어 점수 같으면 영어 점수 오름차순
+            // 국어 점수 오름차순
+            if (score1[0] != score2[0])
+                return score2[0] - score1[0];
+            // 국어 점수 같으면 영어 점수 오름차순
             else {
-                if (score1[1] < score2[1])
-                    return -1;
-                else if (score1[1] > score2[1])
-                    return 1;
-                    // 영어 점수 같으면 수학 점수 내림차순
+                if (score1[1] != score2[1])
+                    return score1[1] - score2[1];
+                // 영어 점수 같으면 수학 점수 내림차순
                 else {
-                    if (score1[2] < score2[2])
-                        return 1;
-                    else if (score1[2] > score2[2])
-                        return -1;
+                    if (score1[2] != score2[2])
+                        return score2[2] - score1[2];
                         // 수학 점수 같으면 이름 사전순 오름차순
                     else
                         return o1.compareTo(o2);
