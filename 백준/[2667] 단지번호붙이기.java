@@ -22,13 +22,13 @@ class Main {
         boolean[][] visited = new boolean[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                // 이미 앞에서 단지에 포함된 아파트이면 다음으로
-                if (visited[i][j])
+                // 이미 앞에서 단지에 포함된 아파트거나 아파트가 아니면 다음으로
+                if (visited[i][j] || matrix[i][j].equals("0"))
                     continue;
-                count = 0; // 단지수 초기화
                 dfs(i, j, n, matrix, visited); // 단지 수 조회
                 if (count > 0) // 단지를 찾으면 개수 정답 리스트에 넣기
                     answer.add(count);
+                count = 0; // 단지수 초기화
             }
         }
         // 정답 문자열 만들고 출력
