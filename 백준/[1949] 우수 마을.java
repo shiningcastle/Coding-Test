@@ -10,8 +10,8 @@ class Main {
     private static int[] people; // 마을별 사람수
 
     private static void dfs(int x, int prev, List<Integer>[] arr) {
-        dp[x][0] = 0; // 첫 시작점 수 고른 경우
-        dp[x][1] = people[x]; // 안 고른 경우
+        dp[x][0] = 0; // 첫 시작점 수 안고른 경우
+        dp[x][1] = people[x]; // 고른 경우
         for(Integer next : arr[x]) {
             if(next.intValue() == prev) // 연결된 정점 중에 부모는 스킵
                 continue;
@@ -33,7 +33,7 @@ class Main {
         List<Integer>[] arr = new ArrayList[n+1]; // 양방향 그래프 생성
         for(int i = 1; i <= n; i++)
             arr[i] = new ArrayList<>();
-        dp = new int[n+1][2]; 
+        dp = new int[n+1][2];
         for (int i = 1; i < n; i++) {
             StringTokenizer st2 = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st2.nextToken()), b = Integer.parseInt(st2.nextToken());
